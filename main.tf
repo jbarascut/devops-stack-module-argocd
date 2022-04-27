@@ -71,10 +71,6 @@ resource "argocd_application" "this" {
         "CreateNamespace=true"
       ]
 
-      retry {
-        backoff = {}
-        limit   = "0"
-      }
     }
   }
 }
