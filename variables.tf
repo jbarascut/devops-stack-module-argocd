@@ -16,6 +16,11 @@ variable "cluster_issuer" {
   default     = ""
 }
 
+variable "oidc" {
+  description = "OIDC Settings"
+  type        = any
+  default     = {}
+}
 
 variable "argocd" {
   description = "ArgoCD settings"
