@@ -16,11 +16,6 @@ variable "cluster_issuer" {
   default     = ""
 }
 
-variable "oidc" {
-  description = "OIDC Settings"
-  type        = any
-  default     = {}
-}
 
 variable "argocd" {
   description = "ArgoCD settings"
@@ -66,4 +61,10 @@ variable "dependency_ids" {
   type = map(string)
 
   default = {}
+}
+
+variable "target_revision" {
+  description = "Manually choose the branch for Argocd sync"
+  type        = string
+  default     = "main"
 }
